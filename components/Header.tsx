@@ -26,13 +26,13 @@ const Header: React.FC = () => {
   }, []);
 
   const activeLinkClass = 'text-bright-yellow';
-  const inactiveLinkClass = 'text-soft-gray hover:text-bright-yellow transition-colors duration-300';
+  const inactiveLinkClass = 'text-white hover:text-bright-yellow transition-colors duration-300';
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-deep-black/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         
-        <Link to="/" className="flex items-center text-2xl font-bold text-soft-gray">
+        <Link to="/" className="flex items-center text-2xl font-bold text-white">
           <img src={encodeURI('/logo.jpg')} alt="ALFDWABI logo" className="w-10 h-10 mr-3 object-contain" />
           <span>ALFDWABI</span>
         </Link>
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
                     {link.label}
                     <ChevronDownIcon className={`w-4 h-4 ml-1 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                   </NavLink>
-                  <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-charcoal-gray rounded-md shadow-lg py-2 transition-all duration-300 ease-in-out ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                  <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-black rounded-md shadow-lg py-2 transition-all duration-300 ease-in-out ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                     {servicesData.map(service => (
                       <NavLink
                         key={service.slug}
@@ -82,12 +82,12 @@ const Header: React.FC = () => {
         </nav>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-            {isOpen ? <XIcon className="w-6 h-6 text-soft-gray" /> : <MenuIcon className="w-6 h-6 text-soft-gray" />}
+            {isOpen ? <XIcon className="w-6 h-6 text-white" /> : <MenuIcon className="w-6 h-6 text-white" />}
           </button>
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-charcoal-gray absolute top-full left-0 w-full">
+        <div className="md:hidden bg-black absolute top-full left-0 w-full">
           <nav className="flex flex-col items-center space-y-4 py-6">
             {navLinks.map((link) => {
               if (link.label === 'Services') {
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                           key={service.slug}
                           to={`/services/${service.slug}`}
                           onClick={() => setIsOpen(false)}
-                          className={({ isActive }) => `text-sm ${isActive ? 'text-bright-yellow' : 'text-soft-gray/80 hover:text-bright-yellow'}`}
+                          className={({ isActive }) => `text-sm ${isActive ? 'text-bright-yellow' : 'text-white/80 hover:text-bright-yellow'}`}
                         >
                           {service.title}
                         </NavLink>

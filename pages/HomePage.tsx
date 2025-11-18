@@ -24,11 +24,11 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${encodeURI('/WhatsApp Image 2025-11-17 at 15.13.06_ee46bbcf.jpg')}')`, filter: 'brightness(0.4)' }}></div>
         <div className="relative z-10 px-6">
           <AnimatedSection>
-            <h1 className="text-4xl md:text-6xl font-bold text-soft-gray mb-4">Building South Africa’s Future—One Project at a Time</h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">Premium construction, civil works, project management, and innovative manufacturing solutions backed by 15+ years of industry experience.</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Building South Africa’s Future—One Project at a Time</h1>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-white">Premium construction, civil works, project management, and innovative manufacturing solutions backed by 15+ years of industry experience.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact" className="bg-bright-yellow text-deep-black font-bold py-3 px-8 rounded-md hover:bg-gold transition-all duration-300">Request a Quote</Link>
-              <Link to="/services" className="bg-transparent border-2 border-bright-yellow text-bright-yellow font-bold py-3 px-8 rounded-md hover:bg-bright-yellow hover:text-deep-black transition-all duration-300">Explore Our Services</Link>
+              <Link to="/contact" className="bg-bright-yellow text-black font-bold py-3 px-8 rounded-md hover:bg-gold transition-all duration-300">Request a Quote</Link>
+              <Link to="/services" className="bg-transparent border-2 border-bright-yellow text-bright-yellow font-bold py-3 px-8 rounded-md hover:bg-bright-yellow hover:text-black transition-all duration-300">Explore Our Services</Link>
             </div>
           </AnimatedSection>
         </div>
@@ -67,13 +67,13 @@ const HomePage: React.FC = () => {
             <AnimatedSection>
                 <h2 className="text-3xl md:text-4xl font-bold mb-12">Highlighted Services</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                    {['Construction & Civil Works', 'Project Management', 'Cleaning Materials Manufacturing', 'Maintenance & Renovations'].map((service, i) => (
-                        <div key={i} className="bg-deep-black p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                            <h3 className="text-xl font-bold text-bright-yellow mb-4">{service}</h3>
-                        </div>
-                    ))}
+                  {['Construction & Civil Works', 'Project Management', 'Cleaning Materials Manufacturing', 'Maintenance & Renovations'].map((service, i) => (
+                    <div key={i} className="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                      <h3 className="text-xl font-bold text-bright-yellow mb-4">{service}</h3>
+                    </div>
+                  ))}
                 </div>
-                <Link to="/services" className="bg-bright-yellow text-deep-black font-bold py-3 px-8 rounded-md hover:bg-gold transition-all duration-300">View All Services</Link>
+                <Link to="/services" className="bg-bright-yellow text-black font-bold py-3 px-8 rounded-md hover:bg-gold transition-all duration-300">View All Services</Link>
             </AnimatedSection>
         </div>
       </section>
