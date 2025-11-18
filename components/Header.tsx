@@ -32,8 +32,9 @@ const Header: React.FC = () => {
     <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-deep-black/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         
-        <Link to="/" className="text-2xl font-bold text-soft-gray">
-          ALFDWABI
+        <Link to="/" className="flex items-center text-2xl font-bold text-soft-gray">
+          <img src={encodeURI('/logo.jpg')} alt="ALFDWABI logo" className="w-10 h-10 mr-3 object-contain" />
+          <span>ALFDWABI</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => {

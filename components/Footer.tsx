@@ -10,7 +10,10 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <h3 className="text-xl font-bold text-soft-gray mb-4">ALFDWABI</h3>
+            <div className="flex items-center mb-4">
+              <img src={encodeURI('/logo.jpg')} alt="ALFDWABI logo" className="w-12 h-12 mr-3 object-contain" />
+              <h3 className="text-xl font-bold text-soft-gray">ALFDWABI</h3>
+            </div>
             <p className="text-sm">
               Committed to Quality, Safety, and Community Transformation.
             </p>
