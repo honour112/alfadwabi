@@ -15,11 +15,16 @@
         theme: {
           extend: {
             colors: {
-              'deep-black': '#ffffff',
-              'charcoal-gray': '#ffffff',
-              'soft-gray': '#111827',
-              'bright-yellow': '#FBE134',
-              'gold': '#E4B61A',
+              // site background: cool, slightly muted white
+              'deep-black': '#f5f8fb',
+              // card/section background: slightly darker cool white
+              'charcoal-gray': '#eef4f8',
+              // main text color mapped to gold
+              'soft-gray': '#E4B61A',
+              // primary accent (use gold instead of bright yellow)
+              'bright-yellow': '#E4B61A',
+              // secondary/darker gold for accents
+              'gold': '#c89b18',
             },
             fontFamily: {
               'sans': ['"Antic Didone"', 'sans-serif'],
@@ -38,6 +43,44 @@
             opacity: 1;
             transform: translateY(0);
         }
+      /* Theme variables and overrides for Tailwind utility classes used in the app.
+         We provide light and dark palettes and map common utility class names
+         (like bg-deep-black, text-soft-gray, bg-bright-yellow, etc.) to CSS variables
+         so we can toggle themes at runtime by setting data-theme on <html>.
+      */
+      :root {
+        /* Light theme (default) */
+        --deep-black: #fbfbfb; /* page background (light, not pure white) */
+        --charcoal-gray: #f3f6f9; /* section/card background (light) */
+        --soft-gray: #1f2937; /* neutral text color (slate-800) */
+        --bright-yellow: #D4AF37; /* primary gold accent */
+        --gold: #B5881F; /* darker gold accent */
+      }
+
+      [data-theme="dark"] {
+        /* Dark theme */
+        --deep-black: #0b0c0c; /* dark page background */
+        --charcoal-gray: #111827; /* dark card background */
+        --soft-gray: #E6E1D8; /* light neutral text on dark */
+        --bright-yellow: #D4AF37; /* primary gold accent stays */
+        --gold: #B5881F;
+      }
+
+      /* Map a small set of utility class names to our variables so existing markup
+         keeps using the same classes (we use !important to override Tailwind where needed).
+      */
+      .bg-deep-black { background-color: var(--deep-black) !important; }
+      .bg-charcoal-gray { background-color: var(--charcoal-gray) !important; }
+      .text-soft-gray { color: var(--soft-gray) !important; }
+      .text-bright-yellow { color: var(--bright-yellow) !important; }
+      .text-gold { color: var(--gold) !important; }
+      .bg-bright-yellow { background-color: var(--bright-yellow) !important; }
+      .bg-gold { background-color: var(--gold) !important; }
+      .border-gold { border-color: var(--gold) !important; }
+
+      /* Ensure body and main containers follow variables by default */
+      body { background-color: var(--deep-black); color: var(--soft-gray); }
+      .container, .min-h-screen { color: var(--soft-gray); }
     </style>
   <script type="importmap">
 {
