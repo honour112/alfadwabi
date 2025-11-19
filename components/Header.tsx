@@ -64,7 +64,7 @@ const Header: React.FC = () => {
                       <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180 text-bright-yellow' : 'text-white'}`} />
                     </button>
                   </div>
-                  <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-black rounded-md shadow-lg py-2 transition-all duration-300 ease-in-out ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                  <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-charcoal-gray rounded-md shadow-lg py-2 transition-all duration-300 ease-in-out ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                     {servicesData.map(service => (
                       <NavLink
                         key={service.slug}
@@ -100,7 +100,7 @@ const Header: React.FC = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-black absolute top-full left-0 w-full">
+        <div className="md:hidden bg-charcoal-gray absolute top-full left-0 w-full">
           <nav className="flex flex-col items-center space-y-4 py-6">
             {navLinks.map((link) => {
               if (link.label === 'Services') {
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
                       aria-expanded={isServicesOpen}
                     >
                       <span className="mr-2">{link.label}</span>
-                      <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180 text-bright-yellow' : 'text-white/80'}`} />
+                      <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180 text-bright-yellow' : 'text-soft-gray/80'}`} />
                     </button>
                     {isServicesOpen && (
                       <div className="flex flex-col items-center space-y-3 pt-2 pl-4 border-l-2 border-gold">
@@ -122,7 +122,7 @@ const Header: React.FC = () => {
                             key={service.slug}
                             to={`/services/${service.slug}`}
                             onClick={() => { setIsOpen(false); setIsServicesOpen(false); }}
-                            className={({ isActive }) => `text-sm ${isActive ? 'text-bright-yellow' : 'text-white/80 hover:text-bright-yellow'}`}
+                            className={({ isActive }) => `text-sm ${isActive ? 'text-bright-yellow' : 'text-soft-gray/80 hover:text-bright-yellow'}`}
                           >
                             {service.title}
                           </NavLink>

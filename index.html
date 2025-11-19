@@ -15,16 +15,11 @@
         theme: {
           extend: {
             colors: {
-              // site background: cool, slightly muted white
-              'deep-black': '#f5f8fb',
-              // card/section background: slightly darker cool white
-              'charcoal-gray': '#eef4f8',
-              // main text color mapped to gold
-              'soft-gray': '#E4B61A',
-              // primary accent (use gold instead of bright yellow)
-              'bright-yellow': '#E4B61A',
-              // secondary/darker gold for accents
-              'gold': '#c89b18',
+              'deep-black': '#0B0C0C',
+              'charcoal-gray': '#111827',
+              'soft-gray': '#E6E1D8',
+              'bright-yellow': '#D4AF37',
+              'gold': '#B5881F',
             },
             fontFamily: {
               'sans': ['"Antic Didone"', 'sans-serif'],
@@ -49,21 +44,13 @@
          so we can toggle themes at runtime by setting data-theme on <html>.
       */
       :root {
-        /* Light theme (default) */
-        --deep-black: #fbfbfb; /* page background (light, not pure white) */
-        --charcoal-gray: #f3f6f9; /* section/card background (light) */
-        --soft-gray: #1f2937; /* neutral text color (slate-800) */
-        --bright-yellow: #D4AF37; /* primary gold accent */
-        --gold: #B5881F; /* darker gold accent */
-      }
-
-      [data-theme="dark"] {
-        /* Dark theme */
-        --deep-black: #0b0c0c; /* dark page background */
-        --charcoal-gray: #111827; /* dark card background */
-        --soft-gray: #E6E1D8; /* light neutral text on dark */
-        --bright-yellow: #D4AF37; /* primary gold accent stays */
-        --gold: #B5881F;
+        /* Dark-only site palette */
+        --deep-black: #0b0c0c; /* page background */
+        --charcoal-gray: #111827; /* card/section background */
+        --soft-gray: #E6E1D8; /* primary text color on dark */
+        --text-on-bg: #ffffff; /* maps to .text-white */
+        --bright-yellow: #D4AF37; /* gold accent */
+        --gold: #B5881F; /* darker gold */
       }
 
       /* Map a small set of utility class names to our variables so existing markup
@@ -74,6 +61,8 @@
       .text-soft-gray { color: var(--soft-gray) !important; }
       .text-bright-yellow { color: var(--bright-yellow) !important; }
       .text-gold { color: var(--gold) !important; }
+        /* remap explicit white text utilities to a theme-aware color */
+        .text-white { color: var(--text-on-bg) !important; }
       .bg-bright-yellow { background-color: var(--bright-yellow) !important; }
       .bg-gold { background-color: var(--gold) !important; }
       .border-gold { border-color: var(--gold) !important; }
