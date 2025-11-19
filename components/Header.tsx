@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   const inactiveLinkClass = 'text-white hover:text-bright-yellow transition-colors duration-300';
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 bg-black/90 backdrop-blur-lg shadow-lg`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         
         <Link to="/" className="flex items-center text-2xl font-bold text-white">
@@ -46,14 +46,23 @@ const Header: React.FC = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <NavLink
-                    to={link.path}
-                    end
-                    className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} font-medium flex items-center`}
-                  >
-                    {link.label}
-                    <ChevronDownIcon className={`w-4 h-4 ml-1 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                  </NavLink>
+                  <div className="flex items-center font-medium">
+                    <NavLink
+                      to={link.path}
+                      end
+                      className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} mr-2`}
+                    >
+                      {link.label}
+                    </NavLink>
+                    <button
+                      aria-haspopup="true"
+                      aria-expanded={isServicesOpen}
+                      onClick={() => setIsServicesOpen(prev => !prev)}
+                      className="focus:outline-none"
+                    >
+                      <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180 text-bright-yellow' : 'text-white'}`} />
+                    </button>
+                  </div>
                   <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-black rounded-md shadow-lg py-2 transition-all duration-300 ease-in-out ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                     {servicesData.map(service => (
                       <NavLink
@@ -92,28 +101,31 @@ const Header: React.FC = () => {
             {navLinks.map((link) => {
               if (link.label === 'Services') {
                 return (
-                  <React.Fragment key={link.path}>
-                    <NavLink
-                      to={link.path}
-                      end
-                      onClick={() => setIsOpen(false)}
-                      className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} text-lg`}
+                  <div key={link.path} className="w-full">
+                    <button
+                      onClick={() => setIsServicesOpen(prev => !prev)}
+                      className={`${inactiveLinkClass} text-lg flex items-center justify-center w-full`}
+                      aria-haspopup="true"
+                      aria-expanded={isServicesOpen}
                     >
-                      {link.label}
-                    </NavLink>
-                    <div className="flex flex-col items-center space-y-3 pt-2 pl-4 border-l-2 border-gold">
-                      {servicesData.map(service => (
-                        <NavLink
-                          key={service.slug}
-                          to={`/services/${service.slug}`}
-                          onClick={() => setIsOpen(false)}
-                          className={({ isActive }) => `text-sm ${isActive ? 'text-bright-yellow' : 'text-white/80 hover:text-bright-yellow'}`}
-                        >
-                          {service.title}
-                        </NavLink>
-                      ))}
-                    </div>
-                  </React.Fragment>
+                      <span className="mr-2">{link.label}</span>
+                      <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180 text-bright-yellow' : 'text-white/80'}`} />
+                    </button>
+                    {isServicesOpen && (
+                      <div className="flex flex-col items-center space-y-3 pt-2 pl-4 border-l-2 border-gold">
+                        {servicesData.map(service => (
+                          <NavLink
+                            key={service.slug}
+                            to={`/services/${service.slug}`}
+                            onClick={() => { setIsOpen(false); setIsServicesOpen(false); }}
+                            className={({ isActive }) => `text-sm ${isActive ? 'text-bright-yellow' : 'text-white/80 hover:text-bright-yellow'}`}
+                          >
+                            {service.title}
+                          </NavLink>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 );
               }
               return (

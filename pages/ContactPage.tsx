@@ -71,7 +71,7 @@ const ContactPage: React.FC = () => {
                             </div>
                             <div className="border-t border-soft-gray/20 pt-8">
                                 <h3 className="text-lg font-semibold mb-4 text-center">Chat with us instantly on WhatsApp.</h3>
-                                <a href="https://wa.me/27000000000" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full bg-green-500 text-white font-bold py-3 px-8 rounded-md hover:bg-green-600 transition-all duration-300">
+                                <a href="https://wa.me/27671268673" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full bg-green-500 text-white font-bold py-3 px-8 rounded-md hover:bg-green-600 transition-all duration-300">
                                     <WhatsAppIcon className="w-6 h-6 mr-3" />
                                     Open WhatsApp
                                 </a>

@@ -141,7 +141,7 @@ const HomePage: React.FC = () => {
           <div className="container mx-auto px-6">
               <AnimatedSection>
                   <div className="flex flex-wrap justify-around items-center gap-8">
-                      <a href="https://wa.me/27000000000" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 font-bold hover:text-charcoal-gray transition-colors">
+                      <a href="https://wa.me/27671268673" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 font-bold hover:text-charcoal-gray transition-colors">
                           <WhatsAppIcon className="w-8 h-8"/> 
                           <span>WhatsApp</span>
                       </a>
@@ -149,7 +149,7 @@ const HomePage: React.FC = () => {
                           <MailIcon className="w-8 h-8"/>
                           <span>Email</span>
                       </a>
-                       <a href="tel:+27000000000" className="flex items-center space-x-2 font-bold hover:text-charcoal-gray transition-colors">
+                       <a href="tel:+27671268673" className="flex items-center space-x-2 font-bold hover:text-charcoal-gray transition-colors">
                           <PhoneIcon className="w-8 h-8"/> 
                           <span>Phone</span>
                       </a>
