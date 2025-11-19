@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
               <img src={encodeURI('/logo.jpg')} alt="ALFDWABI logo" className="w-12 h-12 mr-3 object-contain" />
-              <h3 className="text-xl font-bold text-gold">ALFDWABI</h3>
+              <h3 className="text-xl font-bold text-gold">ALFDWABI CONSTRUCTION</h3>
             </div>
             <p className="text-sm text-gold/90">
               Committed to Quality, Safety, and Community Transformation.

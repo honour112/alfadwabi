@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { MenuIcon, XIcon, ChevronDownIcon } from './icons';
-import ThemeToggle from './ThemeToggle';
+//import ThemeToggle from './ThemeToggle';
 import { servicesData } from '../pages/ServicesPage';
 
 const navLinks = [
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
         
         <Link to="/" className="flex items-center text-2xl font-bold text-white">
           <img src={encodeURI('/logo.jpg')} alt="ALFDWABI logo" className="w-10 h-10 mr-3 object-contain" />
-          <span>ALFDWABI Construction</span>
+          <span>ALFDWABI CONSTRUCTION</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => {
@@ -91,7 +91,7 @@ const Header: React.FC = () => {
           })}
         </nav>
         <div className="flex items-center space-x-3">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
               {isOpen ? <XIcon className="w-6 h-6 text-soft-gray" /> : <MenuIcon className="w-6 h-6 text-soft-gray" />}

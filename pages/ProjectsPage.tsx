@@ -5,13 +5,13 @@ import type { Project } from '../types';
 const allProjects: Project[] = [
     { id: 1, title: "Modern Residence", category: "Residential", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.02_a8ac23d7.jpg') },
     { id: 2, title: "Corporate HQ", category: "Commercial", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.03_3c75bca1.jpg') },
-    { id: 3, title: "Stormwater Drainage System", category: "Civil Works", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.03_a5d1a484.jpg') },
+    { id: 3, title: "Stormwater Drainage System", category: "Civil Works", imageUrl: encodeURI('https://gsmplumbing.com.au/wp-content/uploads/2021/08/Stormwater-Drainage-1.jpg') },
     { id: 4, title: "Apartment Block Upgrade", category: "Renovations", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.04_01e2eb5e.jpg') },
     { id: 5, title: "Detergent Production Line", category: "Manufacturing", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.04_9f2e0320.jpg') },
-    { id: 6, title: "Luxury Villa", category: "Residential", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.04_fa303c3b.jpg') },
+    { id: 6, title: "Luxury Villa", category: "Residential", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 16.36.07_2d66981f.jpg') },
     { id: 7, title: "Retail Center Paving", category: "Civil Works", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.05_6da003a5.jpg') },
     { id: 8, title: "Office Interior Remodel", category: "Renovations", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.05_74fdc6a8.jpg') },
-    { id: 9, title: "Community Housing Project", category: "Residential", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.02_1b74e606.jpg') },
+    { id: 9, title: "Wall Project", category: "Residential", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.02_1b74e606.jpg') },
 ];
 
 const categories: (Project['category'] | 'All')[] = ['All', 'Residential', 'Commercial', 'Civil Works', 'Renovations', 'Manufacturing'];
