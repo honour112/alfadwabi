@@ -3,7 +3,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import type { Project } from '../types';
 
 const allProjects: Project[] = [
-    { id: 1, title: "Modern Residence", category: "Residential", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.02_a8ac23d7.jpg') },
+    { id: 1, title: "Modern Residence", category: "Residential", imageUrl: encodeURI('/Modern.jpg') },
     { id: 2, title: "Corporate HQ", category: "Commercial", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.03_3c75bca1.jpg') },
     { id: 3, title: "Stormwater Drainage System", category: "Civil Works", imageUrl: encodeURI('https://gsmplumbing.com.au/wp-content/uploads/2021/08/Stormwater-Drainage-1.jpg') },
     { id: 4, title: "Apartment Block Upgrade", category: "Renovations", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.04_01e2eb5e.jpg') },
@@ -69,8 +69,47 @@ const ProjectsPage: React.FC = () => {
                         Each project reflects our commitment to safety, durability, and client satisfaction. Browse our gallery to explore completed works and ongoing developments.
                     </p>
                 </AnimatedSection>
+                      
+        {/* Video Showcase */}
+        <section className="py-20">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">Project Videos</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="w-full">
+                <video
+                  className="w-full h-auto rounded-lg shadow-lg"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster={encodeURI('/WhatsApp Image 2025-11-17 at 15.13.02_1b74e606.jpg')}
+                  aria-label="Project video 1"
+                >
+                  <source src={encodeURI('/VID-20251120-WA0000.mp4')} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div className="w-full">
+                <video
+                  className="w-full h-auto rounded-lg shadow-lg"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster={encodeURI('/Modern.jpg')}
+                  aria-label="Project video 2"
+                >
+                  <source src={encodeURI('/WhatsApp Video 2025-11-19 at 22.30.41_377cb4e1.mp4')} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
+          </div>
+        </section>
+
+            </div>
+
         </div>
+        
     );
 };
 

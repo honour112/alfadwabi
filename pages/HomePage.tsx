@@ -116,8 +116,8 @@ const HomePage: React.FC = () => {
           </AnimatedSection>
         </div>
       </section>
-      
-      {/* Testimonials */}
+
+        {/* Testimonials */}
       <section className="py-20 bg-charcoal-gray">
           <div className="container mx-auto px-6">
               <AnimatedSection>
