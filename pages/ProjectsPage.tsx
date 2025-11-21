@@ -8,7 +8,7 @@ const allProjects: Project[] = [
     { id: 3, title: "Stormwater Drainage System", category: "Civil Works", imageUrl: encodeURI('https://gsmplumbing.com.au/wp-content/uploads/2021/08/Stormwater-Drainage-1.jpg') },
     { id: 4, title: "Apartment Block Upgrade", category: "Renovations", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.04_01e2eb5e.jpg') },
     { id: 5, title: "Modern Housing", category: "Manufacturing", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.04_9f2e0320.jpg') },
-    { id: 6, title: "Luxury Villa", category: "Residential", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 16.36.07_2d66981f.jpg') },
+    { id: 6, title: "Luxury Villa", category: "Residential", imageUrl: encodeURI('/luxury.jpg') },
     { id: 7, title: "Retail Center Paving", category: "Civil Works", imageUrl: encodeURI('https://tse3.mm.bing.net/th/id/OIP.TlHORWyR5XuudzJ3nTn5pgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3') },
     { id: 8, title: "Office Interior Remodel", category: "Renovations", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.05_74fdc6a8.jpg') },
     { id: 9, title: "Wall Project", category: "Residential", imageUrl: encodeURI('/WhatsApp Image 2025-11-17 at 15.13.02_1b74e606.jpg') },
